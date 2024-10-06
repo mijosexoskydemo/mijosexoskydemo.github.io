@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="title">ExoVision</h1>
+<p class="subtitle">My first paragraph.</p>
+<div id="unityContainer" style="width: 100%; height: 100%"></div>
+<script>
+   var buildUrl = "path/to/your/webgl/build";
+   var loaderUrl = buildUrl + "/Build/UnityLoader.js";
+   var config = {
+      dataUrl: buildUrl + "/Build/WebGL.data",
+      frameworkUrl: buildUrl + "/Build/WebGL.framework.js",
+      codeUrl: buildUrl + "/Build/WebGL.wasm",
+      streamingAssetsUrl: buildUrl + "/StreamingAssets",
+      companyName: "Your Company",
+      productName: "Your Product",
+      productVersion: "1.0",
+   };
+
+   var script = document.createElement("script");
+   script.src = loaderUrl;
+   script.onload = () => {
+      createUnityInstance(document.querySelector("#unityContainer"), config);
+   };
+   document.body.appendChild(script);
+</script>
+</body>
+</html>
