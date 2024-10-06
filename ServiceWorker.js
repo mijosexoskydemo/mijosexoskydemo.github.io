@@ -1,9 +1,9 @@
 const cacheName = "Mijos-Exosky-0.1";
 const contentToCache = [
-    "Build/mijosexoskydemo.github.io.loader.js",
-    "Build/mijosexoskydemo.github.io.framework.js.gz",
-    "Build/mijosexoskydemo.github.io.data.gz",
-    "Build/mijosexoskydemo.github.io.wasm.gz",
+    "Build/Builds.loader.js",
+    "Build/Builds.framework.js",
+    "Build/Builds.data",
+    "Build/Builds.wasm",
     "TemplateData/style.css"
 
 ];
